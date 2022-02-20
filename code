@@ -1,0 +1,12 @@
+@startuml
+class Robot
+
+Robot -* Engine:uses >
+Engine *- Control_System: turn on >
+Engine o- Wheels: move >
+Control_System o- Manipulator: rotate >
+Control_System o- Camera: get scans <
+Control_System o- Spray_gun: turn on > 
+Control_System o- Spray_gun: turn off > 
+
+@enduml
