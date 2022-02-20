@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+actor "Робот" as fc
+usecase "Сканирование камерой" as UC1
+usecase "Передвижение по заданному маршруту" as UC2
+usecase "Механизм руки в горизонтальное положение" as UC3
+usecase "Механизм руки в вертикальное положение" as UC4
+usecase "Включить краскопульт" as UC5
+usecase "Выключить краскопульт" as UC6
+usecase "Поиск дефектов на полу" as UC7
+usecase "Поиск дефектов на стенах" as UC8
+
+
+
+fc --> UC1
+fc --> UC2
+fc --> UC3
+fc --> UC4
+fc --> UC5
+fc --> UC6
+UC1 --> UC7
+UC1 --> UC8
