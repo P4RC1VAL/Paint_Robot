@@ -4,4 +4,4 @@ FROM python:3-onbuild
 EXPOSE 5000
 
 # run the application
-CMD ["python", "./app.py"]
+CMD ["python", "./CV.py"]
