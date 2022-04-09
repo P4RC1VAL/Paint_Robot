@@ -1,0 +1,15 @@
+@startuml
+hide empty description
+[*] --> MudDetect
+MudDetect --> EngineON: starting engine
+MudDetect --> BuildPath: scanFloor
+MudDetect --> BuildPath: scanWalls
+EngineON --> FollowPath: moving
+BuildPath --> FollowPath: building path for system
+FollowPath --> ManipulatorHor: rotating hydraulic hand on horisontal position
+FollowPath --> ManipulatorVer: rotating hydraulic hand on vertical position
+ManipulatorHor --> SprayGunCleaning: turn on spraygun
+ManipulatorVer --> SprayGunCleaning
+SprayGunCleaning --> GoingHome: return to waiting position
+GoingHome --> [*]
+@enduml
