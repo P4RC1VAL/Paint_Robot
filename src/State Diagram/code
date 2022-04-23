@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+(start)-->(EngineOn)
+(EngineOn)-->(EngineOff) : выключение робота
+(EngineOn)-->(Command) : получение команды
+(MoveOn)-->(Stop) : остановка
+(Command)-->(Spraygun_Off) : закончить закраску
+(Command)-->(Spraygun_On) : закраска графити
+(Stop)-->(MoveOn) : начать движение
+(EngineOff)-->(EngineOn) : включение робота
+(Stop)-->(EngineOff) : выключение робота
+(Spraygun_Off)-->(Stop) : закраска окончена
+(Command)-->(MoveOn) : робот начал движение 
+(Stop)-->(Command) : получение команды
+(Spraygun_On)-->(Command) : получение команды
+(EngineOff)-->(end)
+@enduml
